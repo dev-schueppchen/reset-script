@@ -15,7 +15,7 @@ const ROLES = [
     },
     {
         name: "Admin",
-        color: 0x4FC3F7,
+        color: 0x4FC3F7, 
         permissions: 8,
         hoist: true,
         mentionable: true,
@@ -26,6 +26,20 @@ const ROLES = [
         permissions: 1841307776,
         hoist: true,
         mentionable: true,
+    },
+    {
+        name: "User-Bot",
+        color: 0x476431, 
+        permissions: 0,
+        hoist: true,
+        mentionable: false,
+    },
+    {
+        name: "Bot",
+        color: 0x4CAF50, 
+        permissions: 0,
+        hoist: true,
+        mentionable: false,
     },
     {
         name: "Supporter",
@@ -76,6 +90,13 @@ const ROLES = [
         hoist: false,
         mentionable: true,
     },
+    {
+        name: "Notify",
+        color: null,
+        permissions: 0,
+        hoist: false,
+        mentionable: false,
+    },
 ];
 
 const CATEGORIES = [
@@ -93,35 +114,54 @@ const CATEGORIES = [
         name: "blackboard",
         type: "text",
         channels: [
-            "public-blackboard",
-            "notifications",
+            "dev-blackboard",
+            "etc-blackboard",
             "modlog",
+            "notifications",
+            "community-git",
             "starboard",
+            "suggestions",
+            "hacktoberfest",
         ],
     },
     {
-        name: "talk",
+        name: "Software",
         type: "text",
         channels: [
-            "general",
-            "techtalk",
             "devtalk",
-            "trashtalk",
-            "memes",
-            "commands",
-        ],
-    },
-    {
-        name: "support",
-        type: "text",
-        channels: [
-            "java",
+            "desktops",
+            "------------",
+            "jvm-langs",
             "python",
+            "c-cpp",
             "js",
             "go",
             "webdev",
-            "videos",
+            "rust",
             "etc",
+            "code-reviews",
+        ],
+    },
+    {
+        name: "off-topic",
+        type: "text",
+        channels: [
+            "general",
+            "trash",
+            "memes",
+            "media",
+            "hall-of-shame",
+            "commands",
+            "nsfw",
+        ],
+    },
+    {
+        name: "hardware",
+        type: "text",
+        channels: [
+            "techtalk",
+            "server",
+            "netzwerke",
         ],
     },
     {
@@ -130,8 +170,8 @@ const CATEGORIES = [
         channels: [
             "Staff",
             "Support",
-            "Talk 1",
-            "Talk 2",
+            "Talk",
+            "Private", // For 2 Persons
         ],
     }
 ];
